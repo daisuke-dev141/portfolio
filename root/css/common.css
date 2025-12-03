@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/* ==================== */
+/* base */
+/* ==================== */
+
+html {
+    font-size: 10px;
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+}
+
+body {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+}
+
+
+/* ==================== */
+/* header */
+/* ==================== */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s, backdrop-filter .3s;
+    background-color: rgba(255, 255, 255, 0);
+    /* 最初は透明  */
+    backdrop-filter: blur(0px);
+    /* お好みでぼかし  */
+    z-index: 100;
+}
+
+
+
+
+.logo {
+    width: 50px;
+    margin-left: 25px;
+}
+
+@media screen and (min-width:768px) {
+    header.scrolled {
+        background-color: rgba(255, 255, 255, 0);
+        /* 白い背景（少し透過）  */
+        backdrop-filter: blur(10px);
+        /* 薄いぼかし */
+
+    }
+
+    .logo {
+        width: 70px;
+        margin-left: 120px;
+    }
+
+    /* ロゴ要素にトランジション（アニメーション）を設定 */
+    .logo {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* ロゴ要素がホバーされたとき */
+    .logo:hover {
+        opacity: 0.7;
+
+        transform: scale(1.03);
+
+    }
+}
+
+/* ハンバーガー */
+
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(180deg, rgba(161, 173, 186, 1) 0%, rgba(50, 146, 242, 1)100%);
+    box-shadow: 4px 5px 7px 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    z-index: 1002;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    transform-origin: center;
+    transition: top .3s ease, transform .3s ease, opacity .2s ease;
+}
+
+.menu-trigger span:nth-child(1) {
+    top: calc(50% - 8px);
+}
+
+.menu-trigger span:nth-child(2) {
+    top: 50%;
+}
+
+.menu-trigger span:nth-child(3) {
+    top: calc(50% + 8px);
+}
+
+.menu-trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.menu-trigger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.circle-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(161, 173, 186, 1) 0%, rgba(50, 146, 242, 1)100%);
+    clip-path: circle(0px at calc(100% - 50px) 50px);
+    z-index: 1001;
+    pointer-events: none;
+}
+
+.circle-menu.active {
+    pointer-events: auto;
+}
+
+.circle-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.circle-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* --- PCサイズ (768px以上) の設定 --- */
+@media screen and (min-width: 768px) {
+
+    /* 1. ハンバーガーボタンを非表示にする */
+    .menu-trigger {
+        display: none;
+    }
+
+    /* 2. メニューエリア（円形背景）のスタイルをリセットしてヘッダー化 */
+    .circle-menu {
+        position: fixed;
+        /* または absolute/relative (配置場所に合わせる) */
+        top: 0;
+        right: 0;
+        left: auto;
+        /* 全幅にするなら 0 */
+        width: fit-content;
+        /* ヘッダーとして全幅を使う場合 */
+        height: 80px;
+        /* ヘッダーの高さ（適宜調整） */
+        background-color: rgba(255, 255, 255, 0);
+        background-image: none;
+
+        /* クリップパス（円形マスク）を解除して常時表示 */
+        clip-path: none;
+        pointer-events: auto;
+        z-index: 1000;
+
+        /* JSによるインラインスタイルやtransitionの影響を打ち消す */
+        transition: none;
+    }
+
+    /* 3. リストを横並びにする */
+    .circle-menu ul {
+        flex-direction: row;
+        /* 横並び */
+        justify-content: flex-end;
+        /* 右寄せ（中央なら center） */
+        padding-right: 60px;
+        /* 右端の余白 */
+        gap: 40px;
+        /* メニュー間の間隔 */
+    }
+
+    /* 4. リンクのアニメーション用スタイルをリセット */
+    .circle-menu a {
+        color: black;
+        font-size: 1.8rem;
+        /* 文字サイズをPC用に調整 */
+        font-weight: bold;
+        opacity: 1;
+        /* 最初から表示 */
+        transform: none;
+        /* 位置ずらしを解除 */
+        display: inline-block;
+    }
+
+
+
+    /* リンク要素 (.circle-menu a) に対して直接スタイルを適用 */
+    .circle-menu a {
+        padding-bottom: 3px;
+        background-image: linear-gradient(#000, #000);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 0 1px;
+        transition: background-size 0.3s;
+    }
+
+    /* ホバー時のスタイル */
+    .circle-menu a:hover {
+        background-position: bottom left;
+        background-size: 100% 1px;
+    }
+}
+
+
+
+/* =========================================
+   Contact Section
+   ========================================= */
+.wrap {
+    background-color: #FFFCF5;
+}
+
+.contact {
+    position: relative;
+    background-color: #f9ac6d;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    border-top-left-radius: 50% 10vw;
+    border-top-right-radius: 50% 10vw;
+}
+
+.contact-content {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width:768px) {
+    .contact-content {
+        padding-bottom: 160px;
+    }
+}
+
+.contact-content h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-content p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.email-link {
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* メールホバー下線 */
+.email-link {
+    padding-bottom: 3px;
+    /* テキストと下線の間隔 */
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /* 下線の初期位置 */
+    background-size: 0 1px;
+    /* 下線のサイズ（横幅、高さ） */
+    transition: background-size .6s;
+}
+
+.email-link:hover {
+    background-position: bottom left;
+    /* 下線のホバー時位置 */
+    background-size: 100% 1px;
+    /* 下線の横幅を100%にする */
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .contact-content h2 {
+        font-size: 6.4rem;
+    }
+
+    .email-link {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .contact-content h2 {
+        font-size: 9.2rem;
+    }
+}
+
+
+/* ==================== */
+/* footer */
+/* ==================== */
+
+
+.f-wrap {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.f-content {
+    width: 100%;
+    border-top: 3px solid #fff;
+}
+
+.f-nav {
+    display: none;
+}
+
+.f-copy {
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+
+    .f-nav {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .f-nav ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 37px;
+    }
+
+
+    .f-nav ul li a {
+        font-weight: bold;
+        padding: 10px 10px 3px;
+    }
+
+
+    .f-nav ul li a {
+        padding-bottom: 3px;
+        /* テキストと下線の間隔 */
+        background-image: linear-gradient(#fff, #fff);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        /* 下線の初期位置 */
+        background-size: 0 1px;
+        /* 下線のサイズ（横幅、高さ） */
+        transition: background-size 0.3s;
+    }
+
+    .f-nav ul li a:hover {
+        background-position: bottom left;
+        /* 下線のホバー時位置 */
+        background-size: 100% 1px;
+        /* 下線の横幅を100%にする */
+    }
+}
