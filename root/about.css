@@ -1,0 +1,616 @@
+@charset "utf-8";
+
+/* header {
+    position: static;
+} */
+
+
+/* =========================================
+   Section Common Styles
+   ========================================= */
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h1 {
+    font-size: 5.2rem;
+}
+
+.section-header h2 {
+    font-size: 4.8rem;
+}
+
+.section-sub {
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width:768px) {
+    .section-header h1 {
+        font-size: 6.4rem;
+    }
+
+    .section-sub {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   About Section
+   ========================================= */
+.about {
+    padding: 70px 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFCF5;
+}
+
+
+.about-image {
+    max-width: 380px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 100%;
+}
+
+.about-text h3 {
+    font-size: 3.6rem;
+    margin-bottom: 14px;
+}
+
+.jp-name {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    line-height: 1.8;
+}
+
+
+@media screen and (min-width:768px) {
+
+    /* About */
+    .about {
+        padding: 100px 16px;
+        margin: 0 auto;
+    }
+
+    .about-box {
+        max-width: 942px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about-image {
+        width: 380px;
+        height: auto;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+
+    /* About */
+    .about {
+        padding: 90px;
+        margin: 0 auto;
+    }
+
+    .about-box {
+        max-width: 942px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+    }
+
+    .about-image {
+        width: 380px;
+        height: auto;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+}
+
+/* =========================================
+   Biography Section
+   ========================================= */
+
+.biography {
+    padding: 70px 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tree-container {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    padding: 100px 0.75rem 0;
+}
+
+.tree-container::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    background: red;
+    top: 0px;
+    left: 0.75rem;
+    margin-left: 25%;
+    height: 100%;
+
+}
+
+.tree-container h3 {
+    font-size: 2.0rem;
+    margin: 0 1.5rem;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.leaf-row {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.leaf-row h3::after {
+    position: absolute;
+    content: "";
+    top: 35px;
+    left: 26%;
+    width: 4%;
+    height: 5px;
+    background-color: red;
+}
+
+/* .leaf-title {
+    width: 200px;
+    height: 50px;
+    margin: 0 0 1.5rem 30%;
+} */
+
+.leaf-card {
+    width: 73%;
+    position: relative;
+    top: -55px;
+    left: 27%;
+    padding: 15px 0;
+    margin-left: 3%;
+    margin-bottom: 10px;
+
+}
+
+.leaf-card h4 {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (min-width:960px) {
+
+    .biography {
+        max-width: 942px;
+        margin: 0 auto;
+    }
+}
+
+/* =========================================
+   Strength Section
+   ========================================= */
+.strength {
+    padding: 60px 20px;
+    max-width: 942px;
+    margin: 0 auto;
+}
+
+.strength-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.strength-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.strength-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 6px solid #667eea;
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.strength-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.strength-item:hover::before {
+    opacity: 1;
+}
+
+.strength-item:nth-child(2) {
+    border-left-color: #f56565;
+}
+
+.strength-item:nth-child(3) {
+    border-left-color: #48bb78;
+}
+
+.strength-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.strength-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #667eea;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.strength-item:nth-child(2) .strength-number {
+    color: #f56565;
+}
+
+.strength-item:nth-child(3) .strength-number {
+    color: #48bb78;
+}
+
+.strength-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 20px 0;
+}
+
+/* タブレット以上 */
+@media (min-width: 768px) {
+    .strength {
+        padding: 80px 20px;
+    }
+
+    .strength-container {
+        padding: 60px 40px;
+        border-radius: 30px;
+    }
+
+    .strength-title {
+        font-size: 3.2rem;
+    }
+
+    .strength-grid {
+        gap: 40px;
+    }
+
+    .strength-item {
+        padding: 40px;
+    }
+
+    .strength-number {
+        font-size: 3.5rem;
+        margin-right: 20px;
+    }
+
+    .divider {
+        margin: 25px 0;
+    }
+}
+
+/*====================================================================
+.s_01 .accordion_one
+====================================================================*/
+/* ベーススタイル（モバイル） */
+.s_01 .accordion_one {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.s_01 .accordion_one .accordion_header {
+    background-color: #db0f2f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 60px 15px 15px;
+    text-align: left;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one:nth-of-type(2) .accordion_header {
+    background-color: #ff9a05;
+}
+
+.s_01 .accordion_one:nth-of-type(3) .accordion_header {
+    background-color: #1c85d8;
+}
+
+.s_01 .accordion_one .accordion_header:hover {
+    opacity: .8;
+}
+
+.s_01 .accordion_one .accordion_header .i_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    margin-top: -15px;
+    box-sizing: border-box;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+    position: relative;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i:before,
+.s_01 .accordion_one .accordion_header .i_box .one_i:after {
+    display: flex;
+    content: '';
+    background-color: #fff;
+    border-radius: 10px;
+    width: 18px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: center center;
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i:before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:before {
+    content: none;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.s_01 .accordion_one .accordion_inner {
+    display: none;
+    padding: 30px 30px;
+    border-left: 2px solid #db0f2f;
+    border-right: 2px solid #db0f2f;
+    border-bottom: 2px solid #db0f2f;
+    box-sizing: border-box;
+}
+
+.s_01 .accordion_one:nth-of-type(2) .accordion_inner {
+    border-left: 2px solid #ff9a05;
+    border-right: 2px solid #ff9a05;
+    border-bottom: 2px solid #ff9a05;
+}
+
+.s_01 .accordion_one:nth-of-type(3) .accordion_inner {
+    border-left: 2px solid #1c85d8;
+    border-right: 2px solid #1c85d8;
+    border-bottom: 2px solid #1c85d8;
+}
+
+.s_01 .accordion_one .accordion_inner .box_one {
+    height: auto;
+}
+
+.s_01 .accordion_one .accordion_inner p.txt_a_ac {
+    margin: 0;
+}
+
+/* タブレット以上 */
+@media screen and (min-width: 768px) {
+    .s_01 .accordion_one .accordion_header {
+        font-size: 18px;
+        text-align: center;
+        padding: 20px 11%;
+    }
+
+    .s_01 .accordion_one .accordion_header .i_box {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+    }
+}
+
+/* デスクトップ以上 */
+@media screen and (min-width: 1025px) {
+    .s_01 .accordion_one .accordion_header {
+        font-size: 26px;
+    }
+
+    .s_01 .accordion_one .accordion_header .i_box {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+    }
+}
+
+/* =========================================
+   Skill Section
+   ========================================= */
+
+
+/* スキル */
+
+.skill-div {
+    padding: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* アフター疑似要素で線を付ける */
+
+.skill-h3::after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #646161;
+    transition: width 0.3s;
+}
+
+
+
+/* スキルのそれぞれの画像 */
+
+.skill-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* それぞれサイズ調整 */
+
+.html-img {
+    height: 38px;
+}
+
+.sql-img {
+    height: 38px;
+}
+
+.php-img {
+    height: 28px;
+}
+
+.laravel-img {
+    height: 45px;
+}
+
+.figma-img {
+    height: 45px;
+}
+
+/* スキル文章 */
+
+.skill-p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .skill-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 100px;
+    }
+
+    .skill-div {
+        width: 250px;
+    }
+
+    .skill-p {
+        /* margin-top: 30px; */
+        margin-bottom: 20px;
+    }
+
+    .skill-h3 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* php詳細設定 */
+    .php-h3 {
+        margin-bottom: 30px;
+    }
+
+    .php-img {
+        margin-bottom: 10px;
+    }
+}
