@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- 正しく設定しないと文字化けする -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブ対応させるため -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 検索結果に表示される説明 -->
+    <meta name="description" content="エンジニアを目指す武富大輔のポートフォリオサイトです。">
+
+    <!-- ブラウザのタブに表示される名前 -->
+    <title>Taketomi Daisuke Portfolio</title>
+
+    <!-- ファビコンの設定 -->
+    <link rel="icon" href="img/logo5.svg">
+
+    <!-- リセットCSSの読み込み -->
+    <link rel="stylesheet" href="css/destyle.css">
+
+    <!-- Googleフォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Noto Serif JPの読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- 共通CSSの読み込み -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 個別CSSの読み込み -->
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo5.svg" alt="自分のロゴ">
+            </a>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--ここからメニュー-->
+            <nav class="circle-menu">
+                <ul>
+                    <li>
+                        <a href="works.html">Works</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="about-box">
+                <div class="section-header">
+                    <h1 class="about-heading">About</h1>
+                    <p class="section-sub">私について</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image js-fadeLeft">
+                        <img src="img/about-img.jpg" alt="武富大輔のプロフィール写真">
+                    </div>
+                    <div class="about-text js-fadeLeft">
+                        <h3>Daisuke Taketomi</h3>
+                        <p class="jp-name">武富 大輔</p>
+                        <div class="bio">
+                            <p>大学では6年間化学を専攻し、研究活動に取り組んでいました。卒業後はゴムメーカーで材料設計・評価、試作対応、量産工程の改善などに携わり、その後はPCR検査業務にも従事しました。
+                            </p>
+                            <p>ものづくりや分析の仕事をする中で、「仕組みで課題を解決する」Web分野に興味を持ち、Webプログラマー養成科で6か月間学習。</p>
+                            <p>現在は、Web制作やプログラミングの基礎を実践的に学習しています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="biography">
+            <div class="section-header">
+                <h2>Biography</h2>
+                <p>WEBエンジニアを目指すまで</p>
+            </div>
+            <div class="tree-container">
+                <div class="leaf-row">
+                    <h3>1995年</h3>
+                    <div class="leaf-card">
+                        <h4>徳島県に生まれる</h4>
+                        <p>自然に囲まれた環境で育つ。幼い頃から「なぜ?」を考えるのが好きなタイプ。</p>
+                    </div>
+                </div>
+                <div class="leaf-row">
+                    <h3>2018年</h3>
+                    <div class="leaf-card">
+                        <h4>大学を卒業</h4>
+                        <p>理系分野(化学)を専攻し、物事を論理的に考える力の基礎を身につける。</p>
+                    </div>
+                </div>
+                <div class="leaf-row">
+                    <h3>2020年</h3>
+                    <div class="leaf-card">
+                        <h4>大学院を修了</h4>
+                        <p>研究を通して、仮説検証・データに基づく改善力を養う。</p>
+                    </div>
+                </div>
+                <div class="leaf-row">
+                    <h3>2020年～</h3>
+                    <div class="leaf-card">
+                        <h4>ゴムメーカーに研究開発職として入社</h4>
+                        <p>材料設計・試作・評価・量産化まで一貫して担当。</p>
+                        <p>製品評価方法の検討、量産工程の改善、工程内不良の改善など</p>
+                        <p>「原因を突き止め、改善する」仕事にやりがいを感じる。</p>
+                    </div>
+                </div>
+                <div class="leaf-row">
+                    <h3>2023年～</h3>
+                    <div class="leaf-card">
+                        <h4>PCR検査業務に従事</h4>
+                        <p>検体の受付から測定、結果判定まで一連の工程を担当。</p>
+                        <p>正確さ、再現性、責任感が求められる現場で業務を経験。</p>
+                    </div>
+                </div>
+                <div class="leaf-row">
+                    <h3>2025年</h3>
+                    <div class="leaf-card">
+                        <h4>職業訓練 Webプログラマー養成科に入所</h4>
+                        <p>「作ったものが、すぐ人目に触れる仕事」に魅力を感じ、学習開始。</p>
+                        <div class="section s_01">
+
+                            <div class="accordion_one">
+                                <div class="accordion_header">6か月間スクールカリキュラム<div class="i_box"><i class="one_i"></i>
+                                    </div>
+                                </div>
+                                <div class="accordion_inner">
+                                    <div class="box_one">
+                                        <p class="txt_a_ac">
+                                            ■コンピュータ概論／ハードウェア、ソフトウェアの基礎知識<br>
+                                            ■ネットワーク概論／ネットワークの基礎、通信の仕組みなど<br>
+                                            ■プログラミング概論／プログラミング言語の種別、基本構造<br>
+                                            ■WEBシステム概論／システムの構成と役割、仕組み<br>
+                                            ■配色・カラーデザイン概論／色彩理論の基礎<br>
+                                            ■WEBマーケティング概論／SEOの基本、検索エンジンの評価方法<br>
+                                            ■システム開発の品質管理／品質管理、開発プロセス、制作工程<br>
+                                            ■WEBアプリの開発環境構築<br>
+                                            ■WEBサイト素材編集作成／Photoshop、Illustratorの基本、XDでのワイヤーフレームの制作<br>
+                                            ■HTML5、CSS３の基本<br>
+                                            ■WEBページデザイン／WEBデザイン基礎、レスポンシブレイアウトの設計<br>
+                                            ■Javascript／Javascriptプログラミングの演習、jQueryでのウィンドウ、文字、画面なその操作<br>
+                                            ■WEBページの制作演習／HTMLとCSSを使用したWEBページの制作演習<br>
+                                            ■データベースの基本／RDB、テーブル設計演習、SQL、MySQLの基本操作<br>
+                                            ■PHP／PHPの基本<br>
+                                            ■WordPressによるサイト構築／WordPressの基本、独自テーマの作成、カスタマイズ<br>
+                                            ■WEBサイト&amp;アプリの企画設計（グループ制作）／企画立案、各種仕様書の作成<br>
+                                            ■WEBサイト&amp;アプリの制作実習（グループ制作）／制作、テスト、公開<br>
+                                            ■制作プレゼンテーション（グループ制作）／資料作成、プレゼンテーション<br>
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="Skill">
+            <div class="section-header">
+                <h2>SKill</h2>
+                <p>できること</p>
+            </div>
+
+
+            <div class="flex skill-flex">
+
+                <div class="illustrator skill-div fade-in">
+                    <h3 class="h3 skill-h3">illustrator</h3>
+
+                    <img src="./img/Photoshop.svg" alt="Photoshop" class="skill-img" />
+                    <p class="skill-p">
+                        illustratorと共に学びました。授業では最終課題でFacebookカバーを作成しました。
+                    </p>
+                </div>
+
+                <div class="html skill-div fade-in">
+                    <h3 class="h3 skill-h3">HTML5</h3>
+
+                    <img src="./img/HTML.svg" alt="HTML5" class="skill-img html-img" />
+                    <p class="skill-p">
+                        CSSと共に学びました。知らない要素もまだまだあるかと思いますが、割と使いこなせてい
+                    </p>
+                </div>
+
+                <div class="css skill-div fade-in">
+                    <h3 class="h3 skill-h3">CSS3</h3>
+
+
+                    <img src="./img/CSS.svg" alt="CSS3" class="skill-img" />
+                    <p class="skill-p">
+                        HTMLと共に学びました。知らないプロパティなどまだまだあるかと思いますが、割と使い
+                    </p>
+                </div>
+
+                <div class="javascript skill-div fade-in">
+                    <h3 class="h3 skill-h3">Java script</h3>
+
+                    <img src="./img/javascript.svg" alt="javascript" class="skill-img" />
+                    <p class="skill-p">
+                        java scriptをjQueryと共に学びました。授業で習った基礎的な部分は、理解できています。
+
+                    </p>
+                </div>
+                <div class="php skill-div fade-in">
+                    <h3 class="h3 skill-h3 php-h3">SQL</h3>
+                    <img src="./img/SQL.svg" alt="SQL" class="skill-img sql-img" />
+                    <p class="skill-p">
+                        Microsoft SQL server・MySQL・SQLiteを使用し、SQL文を学びました。プリントを確認しながらですが、割と使いこなせると思います。<br>
+                        <span class="bold">特に頑張りたかった部分でしたので、授業でやっていない自主学習の部分まで勉強しました。</span>
+                    </p>
+                </div>
+
+                <div class="php skill-div fade-in">
+                    <h3 class="h3 skill-h3 php-h3">
+                        PHP <br />
+                        プログラミング
+                    </h3>
+
+                    <img src="./img/PHP.svg" alt="PHP" class="skill-img php-img" />
+                    <p class="skill-p">
+                        PHPを学びました。cookie・sectionや、CRUDはできるようになりました。授業の中でも特に面白さを感じた部分です。より深めていきたいと考えています。
+                    </p>
+                </div>
+
+                <div class="php skill-div fade-in">
+                    <h3 class="h3 skill-h3 php-h3">
+                        Laravel</h3>
+                    <img src="./img/laravel.svg" alt="laravel" class="skill-img laravel-img" />
+                    <p class="skill-p">
+                        PHPフレームワークの「laravel」も習いました。MVCの概念も併せて学びました。
+                    </p>
+                </div>
+
+                <div class="php skill-div fade-in">
+                    <h3 class="h3 skill-h3 php-h3">Figma</h3>
+                    <img src="./img/figma.svg" alt="laravel" class="skill-img figma-img" />
+                    <p class="skill-p">
+                        このポートフォリオ作成にあたり、
+                        サイトマップ、コンテンツマップ、ワイヤーフレーム、デザインカンプを作成時に学び、使用しました。その他ミーティングでも使用し、だいぶ使い慣れてきたと思います。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="strength">
+            <div class="strength-container">
+                <div class="section-header">
+                    <h2>Strength</h2>
+                    <p>強み</p>
+                </div>
+                <div class="strength-grid">
+                    <div class="strength-item">
+                        <div class="strength-header">
+                            <span class="strength-number">01</span>
+                            <h3 class="strength-title">環境適応力</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <p class="strength-description">
+                            新しい環境や分野に対して柔軟に順応することができます。これまで研究職、検査業務、Web制作と異なる領域に挑戦してきましたが、その都度必要な知識や考え方を整理し、自分なりに吸収してきました。現在もWeb制作において、分からないことを調べながら手を動かし、変化に対応し続ける姿勢を大切にしています。
+                        </p>
+                    </div>
+
+                    <div class="strength-item">
+                        <div class="strength-header">
+                            <span class="strength-number">02</span>
+                            <h3 class="strength-title">論理的思考力</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <p class="strength-description">
+                            物事を感覚ではなく、順序立てて考えることを意識しています。コードのエラーやレイアウト崩れが起きた際も、原因を一つずつ切り分けながら検証し、再現性のある形で解決するようにしています。日々の学習の中でも「なぜそうなるのか」を理解してから実装することで、応用力につなげています。
+                        </p>
+                    </div>
+
+                    <div class="strength-item">
+                        <div class="strength-header">
+                            <span class="strength-number">03</span>
+                            <h3 class="strength-title">課題解決力</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <p class="strength-description">
+                            目的から逆算して「今、何が必要か」を考えながら行動することが得意です。ポートフォリオ制作では、見た目だけでなく「誰に、何を伝えるサイトなのか」を意識して構成や導線を考えました。小さな改善を積み重ねながら、より分かりやすく、使いやすいアウトプットを目指しています。
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+    <!-- gsapスクリプト -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- inviewがjQuery1番しか動かない -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+
+
+    <script src="js/about.js"></script>
+</body>
+
+</html>
