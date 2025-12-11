@@ -354,20 +354,19 @@
 }
 
 /*====================================================================
-.s_01 .accordion_one
+.accordion_one
 ====================================================================*/
-/* ベーススタイル（モバイル） */
-.s_01 .accordion_one {
-    max-width: 90%;
+.accordion_container {
+    max-width: 95%;
     margin: 0 auto;
 }
 
-.s_01 .accordion_one .accordion_header {
-    background-color: #db0f2f;
+.accordion_title {
+    background-color: #dc143c;
     color: #fff;
-    font-size: 16px;
+    font-size: 26px;
     font-weight: bold;
-    padding: 15px 60px 15px 15px;
+    padding: 20px 5%;
     text-align: left;
     position: relative;
     z-index: +1;
@@ -375,29 +374,20 @@
     transition-duration: 0.2s;
 }
 
-.s_01 .accordion_one:nth-of-type(2) .accordion_header {
-    background-color: #ff9a05;
+.accordion_title:hover {
+    opacity: 0.8;
 }
 
-.s_01 .accordion_one:nth-of-type(3) .accordion_header {
-    background-color: #1c85d8;
-}
-
-.s_01 .accordion_one .accordion_header:hover {
-    opacity: .8;
-}
-
-.s_01 .accordion_one .accordion_header .i_box {
+.icon_wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     right: 5%;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #fff;
-    margin-top: -15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
     box-sizing: border-box;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -405,7 +395,7 @@
     transition-duration: 0.2s;
 }
 
-.s_01 .accordion_one .accordion_header .i_box .one_i {
+.icon {
     display: block;
     width: 18px;
     height: 18px;
@@ -416,13 +406,13 @@
     position: relative;
 }
 
-.s_01 .accordion_one .accordion_header.open .i_box {
+.accordion_title.open .icon_wrap {
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
 }
 
-.s_01 .accordion_one .accordion_header .i_box .one_i:before,
-.s_01 .accordion_one .accordion_header .i_box .one_i:after {
+.icon:before,
+.icon:after {
     display: flex;
     content: '';
     background-color: #fff;
@@ -437,75 +427,165 @@
     transform-origin: center center;
 }
 
-.s_01 .accordion_one .accordion_header .i_box .one_i:before {
+.icon:before {
     width: 4px;
     height: 18px;
     top: 0;
     left: 7px;
 }
 
-.s_01 .accordion_one .accordion_header.open .i_box .one_i:before {
+.accordion_title.open .icon_wrap .icon:before {
     content: none;
 }
 
-.s_01 .accordion_one .accordion_header.open .i_box .one_i:after {
+.accordion_title.open .icon_wrap .icon:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-.s_01 .accordion_one .accordion_inner {
+.accordion_inner {
     display: none;
-    padding: 30px 30px;
-    border-left: 2px solid #db0f2f;
-    border-right: 2px solid #db0f2f;
-    border-bottom: 2px solid #db0f2f;
+    padding: 20px 20px;
+    border-left: 2px solid #dc143c;
+    border-right: 2px solid #dc143c;
+    border-bottom: 2px solid #dc143c;
     box-sizing: border-box;
 }
 
-.s_01 .accordion_one:nth-of-type(2) .accordion_inner {
-    border-left: 2px solid #ff9a05;
-    border-right: 2px solid #ff9a05;
-    border-bottom: 2px solid #ff9a05;
+
+.ac_inner_wraper {
+    height: 100%;
 }
 
-.s_01 .accordion_one:nth-of-type(3) .accordion_inner {
-    border-left: 2px solid #1c85d8;
-    border-right: 2px solid #1c85d8;
-    border-bottom: 2px solid #1c85d8;
-}
-
-.s_01 .accordion_one .accordion_inner .box_one {
-    height: auto;
-}
-
-.s_01 .accordion_one .accordion_inner p.txt_a_ac {
+p.txt_a_ac {
     margin: 0;
 }
 
-/* タブレット以上 */
-@media screen and (min-width: 768px) {
-    .s_01 .accordion_one .accordion_header {
+@media screen and (max-width: 1024px) {
+    .accordion_title {
         font-size: 18px;
-        text-align: center;
-        padding: 20px 11%;
     }
 
-    .s_01 .accordion_one .accordion_header .i_box {
+    .icon_wrap {
         width: 30px;
         height: 30px;
         margin-top: -15px;
     }
 }
 
-/* デスクトップ以上 */
-@media screen and (min-width: 1025px) {
-    .s_01 .accordion_one .accordion_header {
-        font-size: 26px;
+@media screen and (max-width: 767px) {
+    .accordion_title {
+        font-size: 16px;
+        text-align: left;
+        padding: 15px 60px 15px 15px;
+    }
+}
+
+/* =========================================
+   Skill Section
+   ========================================= */
+
+
+/* スキル */
+
+.skill-div {
+    padding: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* アフター疑似要素で線を付ける */
+
+.skill-h3::after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #646161;
+    transition: width 0.3s;
+}
+
+
+
+/* スキルのそれぞれの画像 */
+
+.skill-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* それぞれサイズ調整 */
+
+.html-img {
+    height: 38px;
+}
+
+.sql-img {
+    height: 38px;
+}
+
+.php-img {
+    height: 28px;
+}
+
+.laravel-img {
+    height: 45px;
+}
+
+.figma-img {
+    height: 45px;
+}
+
+/* スキル文章 */
+
+.skill-p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .skill-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 100px;
     }
 
-    .s_01 .accordion_one .accordion_header .i_box {
-        width: 40px;
-        height: 40px;
-        margin-top: -20px;
+    .skill-div {
+        width: 250px;
     }
+
+    .skill-p {
+        /* margin-top: 30px; */
+        margin-bottom: 20px;
+    }
+
+    .skill-h3 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* php詳細設定 */
+    .php-h3 {
+        margin-bottom: 30px;
+    }
+
+    .php-img {
+        margin-bottom: 10px;
+    }
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
 }

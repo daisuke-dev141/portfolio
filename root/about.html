@@ -18,6 +18,9 @@
     <!-- リセットCSSの読み込み -->
     <link rel="stylesheet" href="css/destyle.css">
 
+    <!-- swiper.jsの読み込み -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
     <!-- Googleフォントの読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,14 +138,16 @@
                     <div class="leaf-card">
                         <h4>職業訓練 Webプログラマー養成科に入所</h4>
                         <p>「作ったものが、すぐ人目に触れる仕事」に魅力を感じ、学習開始。</p>
-                        <div class="section s_01">
 
-                            <div class="accordion_one">
-                                <div class="accordion_header">6か月間スクールカリキュラム<div class="i_box"><i class="one_i"></i>
-                                    </div>
+
+                        <div class="accordion">
+
+                            <div class="accordion_container">
+                                <div class="accordion_title js-accordion_title">6か月間スクールカリキュラム<div class="icon_wrap"><i
+                                            class="icon"></i></div>
                                 </div>
-                                <div class="accordion_inner">
-                                    <div class="box_one">
+                                <div class="accordion_inner js-accordion_inner">
+                                    <div class="ac_inner_wraper">
                                         <p class="txt_a_ac">
                                             ■コンピュータ概論／ハードウェア、ソフトウェアの基礎知識<br>
                                             ■ネットワーク概論／ネットワークの基礎、通信の仕組みなど<br>
@@ -162,14 +167,12 @@
                                             ■WordPressによるサイト構築／WordPressの基本、独自テーマの作成、カスタマイズ<br>
                                             ■WEBサイト&amp;アプリの企画設計（グループ制作）／企画立案、各種仕様書の作成<br>
                                             ■WEBサイト&amp;アプリの制作実習（グループ制作）／制作、テスト、公開<br>
-                                            ■制作プレゼンテーション（グループ制作）／資料作成、プレゼンテーション<br>
-
-
-                                        </p>
+                                            ■制作プレゼンテーション（グループ制作）／資料作成、プレゼンテーション<br></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -183,83 +186,96 @@
                 <p>できること</p>
             </div>
 
+            <!-- スライダーのコンテナ -->
+            <div class="swiper">
+                <!-- 必要に応じたwrapper -->
+                <div class="swiper-wrapper">
+                    <!-- スライド -->
+                    <div class="swiper-slide">
 
-            <div class="flex skill-flex">
+                        <h3 class="h3 skill-h3">illustrator</h3>
 
-                <div class="illustrator skill-div fade-in">
-                    <h3 class="h3 skill-h3">illustrator</h3>
+                        <img src="./img/Photoshop.svg" alt="Photoshop" class="skill-img" />
+                        <p class="skill-p">
+                            illustratorと共に学びました。授業では最終課題でFacebookカバーを作成しました。
+                        </p>
 
-                    <img src="./img/Photoshop.svg" alt="Photoshop" class="skill-img" />
-                    <p class="skill-p">
-                        illustratorと共に学びました。授業では最終課題でFacebookカバーを作成しました。
-                    </p>
-                </div>
+                    </div>
+                    <div class="swiper-slide">
 
-                <div class="html skill-div fade-in">
-                    <h3 class="h3 skill-h3">HTML5</h3>
+                        <h3 class="h3 skill-h3">HTML5</h3>
 
-                    <img src="./img/HTML.svg" alt="HTML5" class="skill-img html-img" />
-                    <p class="skill-p">
-                        CSSと共に学びました。知らない要素もまだまだあるかと思いますが、割と使いこなせてい
-                    </p>
-                </div>
+                        <img src="./img/HTML.svg" alt="HTML5" class="skill-img html-img" />
+                        <p class="skill-p">
+                            CSSと共に学びました。知らない要素もまだまだあるかと思いますが、割と使いこなせてい
+                        </p>
 
-                <div class="css skill-div fade-in">
-                    <h3 class="h3 skill-h3">CSS3</h3>
+                    </div>
+                    <div class="swiper-slide">
+
+                        <h3 class="h3 skill-h3">CSS3</h3>
 
 
-                    <img src="./img/CSS.svg" alt="CSS3" class="skill-img" />
-                    <p class="skill-p">
-                        HTMLと共に学びました。知らないプロパティなどまだまだあるかと思いますが、割と使い
-                    </p>
-                </div>
+                        <img src="./img/CSS.svg" alt="CSS3" class="skill-img" />
+                        <p class="skill-p">
+                            HTMLと共に学びました。知らないプロパティなどまだまだあるかと思いますが、割と使い
+                        </p>
 
-                <div class="javascript skill-div fade-in">
-                    <h3 class="h3 skill-h3">Java script</h3>
+                    </div>
+                    <div class="swiper-slide">
 
-                    <img src="./img/javascript.svg" alt="javascript" class="skill-img" />
-                    <p class="skill-p">
-                        java scriptをjQueryと共に学びました。授業で習った基礎的な部分は、理解できています。
+                        <h3 class="h3 skill-h3">Java script</h3>
 
-                    </p>
-                </div>
-                <div class="php skill-div fade-in">
-                    <h3 class="h3 skill-h3 php-h3">SQL</h3>
-                    <img src="./img/SQL.svg" alt="SQL" class="skill-img sql-img" />
-                    <p class="skill-p">
-                        Microsoft SQL server・MySQL・SQLiteを使用し、SQL文を学びました。プリントを確認しながらですが、割と使いこなせると思います。<br>
-                        <span class="bold">特に頑張りたかった部分でしたので、授業でやっていない自主学習の部分まで勉強しました。</span>
-                    </p>
-                </div>
+                        <img src="./img/javascript.svg" alt="javascript" class="skill-img" />
+                        <p class="skill-p">
+                            java scriptをjQueryと共に学びました。授業で習った基礎的な部分は、理解できています。
 
-                <div class="php skill-div fade-in">
-                    <h3 class="h3 skill-h3 php-h3">
-                        PHP <br />
-                        プログラミング
-                    </h3>
+                        </p>
 
-                    <img src="./img/PHP.svg" alt="PHP" class="skill-img php-img" />
-                    <p class="skill-p">
-                        PHPを学びました。cookie・sectionや、CRUDはできるようになりました。授業の中でも特に面白さを感じた部分です。より深めていきたいと考えています。
-                    </p>
-                </div>
+                    </div>
+                    <div class="swiper-slide">
 
-                <div class="php skill-div fade-in">
-                    <h3 class="h3 skill-h3 php-h3">
-                        Laravel</h3>
-                    <img src="./img/laravel.svg" alt="laravel" class="skill-img laravel-img" />
-                    <p class="skill-p">
-                        PHPフレームワークの「laravel」も習いました。MVCの概念も併せて学びました。
-                    </p>
-                </div>
+                        <h3 class="h3 skill-h3 php-h3">SQL</h3>
+                        <img src="./img/SQL.svg" alt="SQL" class="skill-img sql-img" />
+                        <p class="skill-p">
+                            Microsoft SQL server・MySQL・SQLiteを使用し、SQL文を学びました。プリントを確認しながらですが、割と使いこなせると思います。<br>
+                            <span class="bold">特に頑張りたかった部分でしたので、授業でやっていない自主学習の部分まで勉強しました。</span>
+                        </p>
 
-                <div class="php skill-div fade-in">
-                    <h3 class="h3 skill-h3 php-h3">Figma</h3>
-                    <img src="./img/figma.svg" alt="laravel" class="skill-img figma-img" />
-                    <p class="skill-p">
-                        このポートフォリオ作成にあたり、
-                        サイトマップ、コンテンツマップ、ワイヤーフレーム、デザインカンプを作成時に学び、使用しました。その他ミーティングでも使用し、だいぶ使い慣れてきたと思います。
-                    </p>
+                    </div>
+                    <div class="swiper-slide">
+
+                        <h3 class="h3 skill-h3 php-h3">
+                            PHP <br />
+                            プログラミング
+                        </h3>
+
+                        <img src="./img/PHP.svg" alt="PHP" class="skill-img php-img" />
+                        <p class="skill-p">
+                            PHPを学びました。cookie・sectionや、CRUDはできるようになりました。授業の中でも特に面白さを感じた部分です。より深めていきたいと考えています。
+                        </p>
+
+                    </div>
+                    <div class="swiper-slide">
+
+                        <h3 class="h3 skill-h3 php-h3">
+                            Laravel</h3>
+                        <img src="./img/laravel.svg" alt="laravel" class="skill-img laravel-img" />
+                        <p class="skill-p">
+                            PHPフレームワークの「laravel」も習いました。MVCの概念も併せて学びました。
+                        </p>
+
+                    </div>
+                    <div class="swiper-slide">
+
+                        <h3 class="h3 skill-h3 php-h3">Figma</h3>
+                        <img src="./img/figma.svg" alt="laravel" class="skill-img figma-img" />
+                        <p class="skill-p">
+                            このポートフォリオ作成にあたり、
+                            サイトマップ、コンテンツマップ、ワイヤーフレーム、デザインカンプを作成時に学び、使用しました。その他ミーティングでも使用し、だいぶ使い慣れてきたと思います。
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -317,6 +333,9 @@
 
 
     </main>
+    <!-- swiper.jsの読み込み -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <!-- gsapスクリプト -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- inviewがjQuery1番しか動かない -->
@@ -324,7 +343,6 @@
 
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
-
 
     <script src="js/about.js"></script>
 </body>

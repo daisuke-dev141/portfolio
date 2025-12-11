@@ -91,18 +91,52 @@ $(function () {
 
 });
 
+
 $(function () {
-    $(".js-fadeLeft").on("inview", function () {
-        $(this).addClass("is-inview");
+    // .js-accordion_titleをクリックすると
+    $('.js-accordion_title').click(function () {
+        // クリックした次の要素を展開
+        $(this).next('.js-accordion_inner').slideToggle();
+        // 展開するときjs-accordion_titleクラスにopenクラスを追加してアイコンを回転
+        $(this).toggleClass("open");
     });
 });
 
-// .s_01 .accordion_one
-$(function () {
-    //.accordion_oneの中の.accordion_headerがクリックされたら
-    $('.s_01 .accordion_one .accordion_header').click(function () {
-        //クリックされた.accordion_oneの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
-        $(this).next('.accordion_inner').slideToggle();
-        $(this).toggleClass("open");
+
+
+
+const slideLength = document.querySelectorAll('.swiper-slide').length;
+
+function initSwiper() {
+    const mySwiper = new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        loop: true,
+        loopedSlides: slideLength,
+        speed: 8000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        freeMode: {
+            enabled: true,
+            momentum: false,
+        },
+        grabCursor: true,
+        breakpoints: {
+            1025: {
+                spaceBetween: 32,
+            }
+        },
+        on: {
+            touchEnd: (swiper) => {
+                swiper.slideTo(swiper.activeIndex + 1);
+            }
+        },
+        slidesPerView: 5,
     });
+};
+
+window.addEventListener('load', function () {
+    initSwiper();
 });
