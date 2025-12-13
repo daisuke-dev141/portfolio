@@ -357,7 +357,7 @@
 .accordion_one
 ====================================================================*/
 .accordion_container {
-    max-width: 95%;
+    max-width: 93%;
     margin: 0 auto;
 }
 
@@ -488,6 +488,11 @@ p.txt_a_ac {
 
 /* スキル */
 
+.skill {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .skill-div {
     padding: 30px;
     padding-bottom: 10px;
@@ -520,30 +525,11 @@ p.txt_a_ac {
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 
-/* それぞれサイズ調整 */
-
-.html-img {
-    height: 38px;
-}
-
-.sql-img {
-    height: 38px;
-}
-
-.php-img {
-    height: 28px;
-}
-
-.laravel-img {
-    height: 45px;
-}
-
-.figma-img {
-    height: 45px;
-}
 
 /* スキル文章 */
 
@@ -586,6 +572,11 @@ p.txt_a_ac {
     }
 }
 
-.swiper-wrapper {
+.infinite-swiper .swiper-wrapper {
     transition-timing-function: linear;
 }
+
+
+/* =========================================
+   Insert Section
+   ========================================= */

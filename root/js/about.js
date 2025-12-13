@@ -103,13 +103,10 @@ $(function () {
 });
 
 
-
-
 const slideLength = document.querySelectorAll('.swiper-slide').length;
 
 function initSwiper() {
     const mySwiper = new Swiper('.swiper', {
-        slidesPerView: 'auto',
         spaceBetween: 16,
         loop: true,
         loopedSlides: slideLength,
