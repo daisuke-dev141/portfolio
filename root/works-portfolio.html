@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- 正しく設定しないと文字化けする -->
+  <meta charset="UTF-8" />
+  <!-- レスポンシブ対応させるため -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 検索結果に表示される説明 -->
+  <meta name="description" content="エンジニアを目指す武富大輔のポートフォリオサイトです。" />
+
+  <!-- ブラウザのタブに表示される名前 -->
+  <title>Taketomi Daisuke Portfolio</title>
+
+  <!-- ファビコンの設定 -->
+  <link rel="icon" href="img/logo5.svg" />
+
+  <!-- リセットCSSの読み込み -->
+  <link rel="stylesheet" href="css/destyle.css" />
+
+  <!-- swiper.jsの読み込み -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- Googleフォントの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Noto Serif JPの読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet" />
+
+  <!-- 共通CSSの読み込み -->
+  <link rel="stylesheet" href="css/common.css" />
+
+  <!-- 個別CSSの読み込み -->
+  <link rel="stylesheet" href="css/works-portfolio.css" />
+</head>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="img/logo5.svg" alt="自分のロゴ" />
+    </a>
+  </div>
+
+  <div class="menu-container">
+    <div class="menu-trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--ここからメニュー-->
+    <nav class="circle-menu">
+      <ul>
+        <li>
+          <a href="works.html">Works</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section class="works-detail">
+    <div class="works-detail-top">
+      <div class="img-top">
+        <img class="img-top-content" src="img/work-portfolio.png" alt="worksのポートフォリオ写真" />
+      </div>
+      <div class="works-detail-top-info">
+        <h1 class="works-title">ポートフォリオサイト</h1>
+        <p class="works-region">Design/Coding</p>
+        <p class="works-detail-text">
+          就職活動を目的としたポートフォリオサイトを制作しました。
+        </p>
+        <div class="button">
+          <a target="_blank" href=# class="button-link arrow-extend">
+            <span class="button-text">Site View</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ここから詳細な説明 -->
+    <section class="works-detail-explain">
+      <div class="works-info">
+        <dl class="works-info-content">
+          <div class="works-info-list">
+            <h2 class="works-info-title">目的</h2>
+            <dd class="works-info-text">
+              <ul>
+                <li>就職活動において内定獲得すること（最終ゴール）</li>
+                <li>
+                  「面接でさらに詳しく話を聞いてみたい」「一度会ってみたい」と採用担当の方に思っていただくこと
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <h2 class="works-info-title">課題</h2>
+            <dd class="works-info-text">
+              <ul>
+                <li>
+                  自身のオリジナルポートフォリオサイトを持っていないため、スキルや制作物が見えない
+                </li>
+                <li>
+                  履歴書や職務経歴書だけでは自身の人柄や考えなどが伝わりづらい
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <h2 class="works-info-title">ターゲット</h2>
+            <dd class="works-info-text">
+              <ul>
+                <li>企業の採用担当、現場の方々</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">情報設計</dt>
+            <dd class="works-info-text">
+              <ul>
+                <li>
+                  採用担当、現場の方々が最も重要視される「制作物」をMVの下に配置しています。制作物のジャンルで絞り込むボタンを設置し、興味のある制作物にすぐにアクセスしやすいようにしました。
+                </li>
+                <li>
+                  サイトの閲覧に時間が掛からないよう、サイトの表示速度を考慮しアニメーションをMVのみとしました。
+                </li>
+                <li>
+                  「社風や現場のメンバーとマッチするのか？」「伸び代はあるのか？」の判断材料になるよう、Aboutページでは履歴書や職務経歴書には掲載されていない情報を掲載しています。
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">デザイン詳細</dt>
+            <dd class="works-info-text">
+              <ul>
+                <li>与えたい印象：誠実、信頼、優しい、親しみ</li>
+                <li>メインカラー：ロゴの青色</li>
+                <li>配色：青色、水色、薄い水色</li>
+                <li>フォント：Outfit、Zen Kaku Gothic New</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">デザイン意図</dt>
+            <dd class="works-info-text">
+              <ul>
+                <li>
+                  見やすさや情報へのアクセスのしやすさを考慮し、シンプルなスタイルにしています。MVのデザインを工夫することで差別化を図っています。
+                </li>
+                <li>
+                  全体的に自分の人柄や目指す像（誠実さ、信頼、親しみ）が伝わるよう、デザインしています。
+                </li>
+                <li>
+                  MVデザイン
+                  <ul>
+                    <li>
+                      自分が昔から好きな食べ物である「メロン」モチーフのオブジェクトを用いました。
+                    </li>
+                    <li>
+                      「メロン=実」であることから、自分の名前の一文字「実」や与えたい印象である誠「実」を表現しています。
+                    </li>
+                    <li>
+                      実の部分（円）は「調和・やさしさ」、ツルは曲線とハートにすることで「やわらかさ・あたたかみ・心」を表現しています。
+                    </li>
+                    <li>
+                      青色のグラデーションにすることで「誠実さ」や「IT感」を表現しています。
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  画像の角やボタン、ヘッダーを丸くすることで「やさしさ・あたたかさ」を表現しています。
+                </li>
+                <li>
+                  「あたたかみ」を与えるため、プロフィール画像をイラストにしています。（プロフィールのイラストは自身で描いています）
+                </li>
+                <li>
+                  「フロントエンドエンジニアを目指すまで」はストーリーのようなデザイン（横にスワイプしていく）にすることで楽しく読めるよう工夫しました。
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">制作期間</dt>
+            <dd class="works-info-text">
+              <dl class="works-time">
+                <div class="works-time-list">
+                  <dt class="works-time-title">ワイヤーフレーム</dt>
+                  <dd class="works-time-text">1日</dd>
+                </div>
+                <div class="works-time-list">
+                  <dt class="works-time-title">デザイン</dt>
+                  <dd class="works-time-text">2週間</dd>
+                </div>
+                <div class="works-time-list">
+                  <dt class="works-time-title">コーディング</dt>
+                  <dd class="works-time-text">4週間</dd>
+                </div>
+                <div class="works-time-list">
+                  <dt class="works-time-title">WordPress構築</dt>
+                  <dd class="works-time-text">2週間</dd>
+                </div>
+              </dl>
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">担当領域</dt>
+            <dd class="works-info-text">
+              サイトマップ作成/ワイヤーフレーム作成/デザイン/コーディング/WordPress構築
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">開発手法</dt>
+            <dd class="works-info-text">
+              HTML/CSS/JavaScript/PHP/WordPress
+            </dd>
+          </div>
+          <div class="works-info-list">
+            <dt class="works-info-title">使用ツール</dt>
+            <dd class="works-info-text">Figma/VisualStudioCode</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <div class="works-detail-image-all">
+      <figure class="image-all-pc">
+        <img class="image-all" src="https://mami-portfolio.com/wp-content/uploads/2025/09/portfoliosite_pc.jpg" alt="" />
+      </figure>
+      <figure class="image-all-sp">
+        <img class="image-all" src="https://mami-portfolio.com/wp-content/uploads/2025/09/portfoliosite_sp.jpg" alt="" />
+      </figure>
+    </div>
+  </section>
+</main>
+
+</html>

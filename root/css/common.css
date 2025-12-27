@@ -28,6 +28,7 @@ p {
 img {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 a {
@@ -190,6 +191,7 @@ header {
 /* --- PCサイズ (768px以上) の設定 --- */
 @media screen and (min-width: 768px) {
 
+
     /* 1. ハンバーガーボタンを非表示にする */
     .menu-trigger {
         display: none;
@@ -205,10 +207,11 @@ header {
         /* 全幅にするなら 0 */
         width: fit-content;
         /* ヘッダーとして全幅を使う場合 */
-        height: 80px;
+        height: 100px;
         /* ヘッダーの高さ（適宜調整） */
         background-color: rgba(255, 255, 255, 0);
         background-image: none;
+        padding-right: 120px;
 
         /* クリップパス（円形マスク）を解除して常時表示 */
         clip-path: none;
@@ -225,8 +228,8 @@ header {
         /* 横並び */
         justify-content: flex-end;
         /* 右寄せ（中央なら center） */
-        padding-right: 60px;
-        /* 右端の余白 */
+
+
         gap: 40px;
         /* メニュー間の間隔 */
     }
