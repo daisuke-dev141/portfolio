@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #ff7300;
+}
+
+
 .works-detail-top {
   padding: 100px 30px 50px;
 
@@ -21,7 +31,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width:959px) {
+@media screen and (min-width:768px) {
   .img-top {
     margin: 0 auto;
   }
@@ -105,4 +115,21 @@
   .arrow-extend:hover {
     color: #fff;
   }
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* 詳細欄 */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.first-section {
+  border-top: 1px solid #ff7300;
+}
+
+.detail-section {
+  padding: 30px 30px;
+  border-bottom: 1px solid #ff7300;
+}
+
+.detail-section li {
+  list-style: circle;
 }
